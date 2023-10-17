@@ -7,11 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: First step to check out repository code
+        id: step1
         uses: actions/checkout@v4
       - name: Second step to list files in the repository
+        id: step2
         run: |
           ls ${{ github.workspace }}
       - name: Last step to print job status
+        id: step3
         run : echo "🍏 This job's status is ${{ job.status }}."
       # - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       # - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
