@@ -18,6 +18,7 @@ jobs:
         id: step3
         run : echo "🍏 This job's status is ${{ job.status }}."
   Test-Approve:
+    needs: Explore-GitHub-Actions
     runs-on: ubuntu-latest
     environment:
       name: test
