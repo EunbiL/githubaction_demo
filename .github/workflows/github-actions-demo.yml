@@ -5,6 +5,8 @@ on:
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    environment:
+      name: test
     steps:
       - name: First step to check out repository code
         id: step1
